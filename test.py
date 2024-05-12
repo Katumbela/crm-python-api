@@ -1,9 +1,8 @@
+import facebook_scraper as fs
 
-from facebook_scraper import get_posts  
+# Obtém um objeto gerador de posts
+gen = fs.get_posts('facebook', page=50, options={"progress": True})
 
-
-for post in get_posts('angola', pages=3): 
-    print(post['text'][:50])
- 
-
-
+# Itera sobre o objeto gerador para imprimir os posts
+for post in gen:
+    print(post['text'][:50])  # Imprime os primeiros 50 caracteres do texto do post
