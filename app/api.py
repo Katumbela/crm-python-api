@@ -1,4 +1,4 @@
-from typing import Union
+
 from facebook_scraper import get_posts
 from fastapi import FastAPI
 
